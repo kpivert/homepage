@@ -361,7 +361,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -374,6 +374,110 @@ footer {
 
   .hero-bullets li::before {
     display: none;
+  }
+} */
+
+/* ---- Tablet (≤ 860px): sections stack, nav shrinks ---- */
+@media (max-width: 860px) {
+  .alt-section {
+    grid-template-columns: 1fr;
+  }
+  .alt-section:nth-of-type(odd) .section-accent,
+  .alt-section:nth-of-type(even) .section-accent {
+    order: 1;
+    min-height: 120px;
+  }
+  .alt-section:nth-of-type(odd) .section-content,
+  .alt-section:nth-of-type(even) .section-content {
+    order: 2;
+  }
+  .section-content {
+    padding: 40px 28px;
+  }
+  .hero {
+    height: 70vh;
+    min-height: 420px;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-center {
+    gap: 1.2rem;
+  }
+  .nav-center a {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* ---- Mobile (≤ 600px): two-row navbar ---- */
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    gap: 0;
+  }
+  .nav-left {
+    flex: 0 0 auto;
+  }
+  .nav-right {
+    flex: 0 0 auto;
+    gap: 1.1rem;
+  }
+  .nav-center {
+    flex: 0 0 100%;
+    order: 3;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem 1rem;
+    padding: 8px 0 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 6px;
+  }
+  .nav-center a {
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+  }
+  .hero {
+    height: 60vh;
+    min-height: 340px;
+  }
+  .hero-name {
+    letter-spacing: 2px;
+  }
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+  .section-content {
+    padding: 36px 20px;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .about-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-photo {
+    width: 90px;
+    height: 90px;
+  }
+  .contact-links {
+    gap: 8px;
+  }
+  .contact-link {
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+  .tag {
+    font-size: 9.5px;
+    padding: 4px 10px;
+  }
+  footer {
+    font-size: 11px;
+    padding: 20px 16px;
   }
 }
 
